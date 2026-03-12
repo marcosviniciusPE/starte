@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.legs {
+    width: 100%;
+    height: auto;
+    background-color: #004B8D;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sobre{
+    margin: 30PX;
+    font-size: 18px;
+    width: 55vh;
+    background-color: inherit;
+}
+
+.sobre img{
+    width: 140px;
+    height: 80px;
+}
+
+.sobre p {
+    text-align: left;
+    display: inline-block;
+}
+
+.logos {
+    margin: 25PX;
+    background-color: inherit;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;}
+
+.logos img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.links {
+    margin: 30px;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loc {
+    width: 100%;
+    height: auto;
+    background-color: #004B8D;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
