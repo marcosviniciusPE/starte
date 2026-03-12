@@ -56,9 +56,20 @@
 .loc {
     width: 100%;
     height: auto;
-    background-color: #004B8D;
+    background-color: #2B6AA1;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.loc a {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    margin: 10px;
+}
+
+.cop {
+    background-color: #004B8D;
 }
