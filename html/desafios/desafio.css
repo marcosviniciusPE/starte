@@ -6,14 +6,6 @@ body{
 
 }
 
-#facil{
-
-    color: #004B8D;
-    font-weight: 600;
-    font-size: 1.5vw;
-
-}
-
 .secao{
 
     display: flex;
@@ -39,9 +31,10 @@ body{
 
 }
 
-#facil .titulos{
+#facil .titulos{background: #0F9D58;}
 
-    background: #0F9D58;
+.titulos{
+
     font-size: 1.3vw;
     color: #fff;
     text-align: center;
@@ -49,7 +42,7 @@ body{
 
 }
 
-#facil #logo{
+#logo{
 
     width: 10vw;
 
@@ -68,12 +61,71 @@ body{
 
 }
 
-#espacoNIvel1{
+.espacoNivels{
 
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 70px 0;
-    background: #87CE87;
+    color: #004B8D;
+    font-weight: 600;
+    font-size: 1.5vw;
+
+}
+
+#nivelFacil{background: #87CE87;}
+
+/* seção medio */
+
+#medio{background: #FFF1B8;}
+#medio .titulos{background: #FFD700;}
+
+#espacoMedio{gap: 4vw;}
+
+#espacoMedio .secao{background: #fff;}
+
+#espacoMedio .parteLaranja{
+
+        background: #EBA219;
+        color: #F5EEE2;
+
+}
+
+
+/* MAESTRIA ÉTICA */
+
+#maestriaEtica{
+
+    background: #EE6A6A;
+    padding: 20px 0 50px 0;
+    color: #fff;
+    font-size: 2.7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#maestriaEtica h3{
+
+    font-size: 0.9em;
+    margin: 0 0 90px 0;
+
+}
+
+/* maestria */
+
+#maestriaEtica .parteLaranja{
+
+    color: #000;
+    background: #F5EEE2;
+    font-weight: 600;
+
+}
+
+#maestriaEtica .secao{
+
+    background-color: #FFFFFF;
+    color: #EBA219;
+    font-weight: 600;
 
 }
