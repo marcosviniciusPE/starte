@@ -66,17 +66,18 @@ SEÇÃO PRINCIPAL
 }
 
 #secaoPrincipal .textoPrinpal{
-    margin-left: 2vw;
+    margin-left: 9vw;
     align-self: baseline;
 }
 
 #secaoPrincipal h1{
     font-size: 96px;
+    margin-bottom: 0;
 }
 
 #secaoPrincipal p{
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.8vw;
 }
 
 #secaoPrincipal button{
@@ -410,7 +411,7 @@ iframe{
 }
 
 img{
-    max-width:100%;
+    width: 49vw;
     height:auto;
     display:block;
 }
