@@ -1,0 +1,172 @@
+body{
+margin:0;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* PARTE DE CIMA */
+.topo{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background: white;
+padding:10px 20px;
+}
+
+.topo h1{
+color:#1d4f8c;
+font-size:22px;
+text-shadow: 2px 2px 4px #00000071;
+}
+
+.topo_logo{
+    display: flex;
+    align-items: center;
+}
+
+.space {
+    height: 50px;
+    border-radius: 10px;
+    width: 1.5px;
+    margin-left: 30px;
+    margin-right: 15px;
+    background-color: #a1a1a1;
+
+}
+
+.logo{
+width:90px;
+}
+
+.perfil{
+width:50px;
+height:50px;
+border-radius:50%;
+}
+
+/* BARRA AZUL */
+.nav{
+background:#1d4f8c;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 20px;
+}
+
+.nav a{
+margin-right: 15px;
+color:white;
+font-weight:bold;
+text-decoration: none;
+}
+
+/* BUSCA */
+.nav input{
+padding:6px;
+border-radius:15px;
+border:none;
+width:200px;
+}
+
+.nav img{
+    width: 1vw;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+
+
+
+
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f5f5f5;
+}
+
+.topo{
+background:#0bb1a5;
+color:white;
+padding:15px;
+text-align:center;
+}
+
+.topo ul{
+list-style:none;
+display:flex;
+justify-content:center;
+gap:30px;
+padding:0;
+}
+
+.banner img{
+width:100%;
+}
+
+.conteudo{
+padding:20px;
+text-align:center;
+<hr style="height: 5px;background-color: orange;margin: 0;border: 0;">
+}
+
+.conteudo img{
+width:250px;
+border-radius:10px;
+}
+
+.imagem img{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* Opcional: define uma largura para a imagem */
+  width: 50%;
+}
+
+
+
+
+.noticias{
+background:#0bb1a5;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.noticias a{
+background:#f7b500;
+padding:10px 20px;
+color:white;
+text-decoration:none;
+border-radius:5px;
+}
+
+.curso{
+padding:20px;
+text-align:center;
+}
+
+.curso img{
+width:200px;
+border-radius:100px;
+}
+
+.video{
+text-align:center;
+padding:20px;
+}
+
+.tecnico{
+padding:20px;
+text-align:center;
+}
+
+.evento img{
+width:100%;
+}
+
+.rodape{
+background:#c41c5d;
+color:white;
+text-align:center;
+padding:20px;
+}
