@@ -1,0 +1,116 @@
+/* =========================
+TABLET
+=========================*/
+
+@media (max-width:1024px){
+
+.aprendizesTitulo{
+width:50%;
+font-size:32px;
+}
+
+.aprendizesTexto{
+width:50%;
+}
+
+.parteAmarela{
+width:50%;
+}
+
+.gestaoAzul{
+width:50%;
+font-size:32px;
+}
+
+#gestao img{
+width:70%;
+}
+
+}
+
+
+/* =========================
+CELULAR
+=========================*/
+
+@media (max-width:768px){
+
+/* SAUDE */
+
+#saude h2{
+font-size:28px;
+}
+
+#saude .tecnicoEnfermagem{
+width:80%;
+font-size:1.2em;
+}
+
+/* APRENDIZAGEM */
+
+#aprendizes{
+flex-direction:column;
+text-align:center;
+gap:30px;
+padding:30px 20px;
+}
+
+.aprendizesTitulo{
+width:100%;
+font-size:28px;
+}
+
+.aprendizesTexto{
+width:100%;
+}
+
+.aprendizesImagem img{
+width:90%;
+}
+
+/* IMAGENS */
+
+.imagemTrabalho{
+height:250px;
+}
+
+.imagemTecnologia{
+height:250px;
+}
+
+/* TECNOLOGIA */
+
+.alinhamentoTecnologia{
+flex-direction:column;
+gap:20px;
+}
+
+.parteAmarela{
+width:90%;
+border-radius:20px;
+}
+
+.azul{
+position:static;
+width:160px;
+height:160px;
+border-radius:50%;
+}
+
+/* GESTAO */
+
+.gestaoAzul{
+width:80%;
+font-size:28px;
+}
+
+#gestao img{
+width:90%;
+}
+
+#gestao .palavras{
+position:static;
+margin-top:10px;
+}
+
+}
