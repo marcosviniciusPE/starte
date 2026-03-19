@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construção Avançada Senac - Cenário Urbano</title>
+<style>
+  body { margin:0; overflow:hidden; background:#87ceeb; font-family:sans-serif;}
+  #ui {position:absolute; top:20px; left:20px; color:white; font-size:20px; text-shadow:1.5px 1.5px 3px rgba(0,0,0,0.7); z-index:10;}
+  button {margin-top:10px; padding:8px 16px; background:#f4d35e; border:3px solid #b08900; cursor:pointer; font-family:inherit;}
+  button:hover {background:#ffd166;}
+  canvas {display:block;}
+</style>
+</head>
+<body>
+
+<div id="ui">
+  <div id="info"></div>
+  <button onclick="addBadge()">Ganhar Emblema</button>
+  <button onclick="resetProgress()">Resetar</button>
+</div>
+
+<canvas id="game"></canvas>
+
+<script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+ctx.imageSmoothingEnabled = true;
+
+const MAX_BADGES = 30;
+let badges = parseInt(localStorage.getItem("badges")) || 0;
+let animProgress = 0;
+
+// Configuração visual
+const COLORS = {
+  steel:"#888888", concrete:"#dcdcdc", window:"#a2d2ff", frame:"#555555",
+  shadow:"rgba(0,0,0,0.2)", roof:"#7a7a7a", ground:"#588157",
+  crane:"#ffcc00", truck:"#ff6b6b", cementMixer:"#8b5e3c",
+  facade:"#f4f4f4", stripe:"#0057b7", stripeLight:"#0073e6",
+  house:"#ffdd99", roofHouse:"#b5651d", brick:"#b87333",
+  debris:"#aaaaaa", road:"#444", sidewalk:"#999", tree:"#2d6a4f", post:"#333"
+};
+
+// Partículas e máquinas
+let particles = [];
+let craneY = 50;
+
+function save(){ localStorage.setItem("badges", badges);}
+function updateUI(){ document.getElementById("info").innerText = `🏢 Emblemas: ${badges} / ${MAX_BADGES}`;}
+
+function addBadge(){
+  if(badges<MAX_BADGES){
+    badges++;
+    animProgress = 0;
+    save();
+    updateUI();
+  }
+}
+
+function resetProgress(){
+  badges=0;
+  animProgress=0;
+  particles=[];
+  save();
+  updateUI();
+}
+
+function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; }
+window.addEventListener("resize", resize);
+
+// Chão, rua e calçada
+function drawGround(){
+  const baseY = canvas.height-100;
+  ctx.fillStyle = COLORS.road;
+  ctx.fillRect(0, baseY-20, canvas.width, 40);
+  ctx.fillStyle = COLORS.sidewalk;
+  ctx.fillRect(0, baseY-40, canvas.width, 20);
+  ctx.fillRect(0, baseY+20, canvas.width, 20);
+
+  // Faixa de pedestre
+  for(let i=0;i<canvas.width;i+=60){
+    ctx.fillStyle="#fff";
+    ctx.fillRect(i, baseY-10, 40, 5);
+  }
+}
+
+// Casas e comércio ao redor
+function drawCity(){
+  const baseY = canvas.height-100;
+  const buildings = [
+    {x:100, w:80, h:60, color:"#f4a261"},
+    {x:220, w:100, h:80, color:"#e76f51"},
+    {x:canvas.width-300, w:90, h:70, color:"#2a9d8f"},
+    {x:canvas.width-180, w:70, h:50, color:"#e9c46a"}
+  ];
+
+  buildings.forEach(b=>{
+    ctx.fillStyle=b.color;
+    ctx.fillRect(b.x, baseY-b.h, b.w, b.h);
+    // telhado simples
+    ctx.fillStyle=COLORS.roofHouse;
+    ctx.beginPath();
+    ctx.moveTo(b.x-5, baseY-b.h);
+    ctx.lineTo(b.x+b.w/2, baseY-b.h-20);
+    ctx.lineTo(b.x+b.w+5, baseY-b.h);
+    ctx.closePath();
+    ctx.fill();
+    // porta
+    ctx.fillStyle="#6b4226";
+    ctx.fillRect(b.x+b.w/3, baseY-b.h/3, b.w/3, b.h/3);
+  });
+
+  // Árvores
+  for(let i=0;i<5;i++){
+    const tx = 150 + i*200;
+    const ty = baseY-50;
+    ctx.fillStyle=COLORS.tree;
+    ctx.beginPath();
+    ctx.arc(tx, ty, 20, 0, 2*Math.PI);
+    ctx.fill();
+    ctx.fillStyle="#6b4226";
+    ctx.fillRect(tx-5, ty, 10, 30);
+  }
+
+  // Postes de luz
+  for(let i=0;i<5;i++){
+    const px = 100 + i*250;
+    const py = baseY-60;
+    ctx.fillStyle = COLORS.post;
+    ctx.fillRect(px, py, 5, 60);
+    ctx.beginPath();
+    ctx.arc(px+2.5, py, 8, 0, 2*Math.PI);
+    ctx.fill();
+  }
+}
+
+// Partículas
+function updateParticles(){
+  const floors = Math.min(Math.ceil(badges * 15 / MAX_BADGES), 15);
+  const floorHeight = 40;
+  const buildingWidth = 300;
+  const baseX = canvas.width/2 - buildingWidth/2;
+  const baseY = canvas.height-100;
+
+  if(animProgress < 1){
+    for(let i=0;i<5;i++){
+      particles.push({
+        x: baseX + Math.random()*buildingWidth,
+        y: baseY - floorHeight*floors + floorHeight*(1-animProgress),
+        vx: (Math.random()-0.5)*2,
+        vy: Math.random()*-2,
+        alpha:1
+      });
+    }
+  }
+
+  particles.forEach(p=>{
+    p.x += p.vx;
+    p.y += p.vy;
+    p.vy += 0.05;
+    p.alpha -= 0.02;
+  });
+
+  particles = particles.filter(p=>p.alpha>0);
+  particles.forEach(p=>{
+    ctx.fillStyle = `rgba(170,170,170,${p.alpha})`;
+    ctx.fillRect(p.x, p.y, 3,3);
+  });
+}
+
+// Grua
+function drawCrane(){
+  const baseY = canvas.height-100;
+  const buildingWidth = 300;
+  const baseX = canvas.width/2 - buildingWidth/2;
+
+  ctx.fillStyle = COLORS.crane;
+  ctx.fillRect(baseX + buildingWidth + 50, 50, 10, baseY-50); // mastro
+  ctx.fillRect(baseX + buildingWidth + 50, craneY, 100, 10); // braço
+  const floors = Math.min(Math.ceil(badges * 15 / MAX_BADGES), 15);
+  const floorHeight = 40;
+  const hookY = baseY - floorHeight*floors + floorHeight*(1-animProgress);
+  ctx.fillRect(baseX + buildingWidth + 140, hookY, 10, 10);
+  craneY = 50 + Math.sin(Date.now()/1000)*20;
+}
+
+// Prédio
+function drawBuilding(){
+  const baseX = canvas.width/2 - 150;
+  const baseY = canvas.height-100;
+  const floorHeight = 40;
+  const buildingWidth = 300;
+  const floors = Math.min(Math.ceil(badges * 15 / MAX_BADGES), 15);
+
+  for(let i=0;i<floors;i++){
+    const y = baseY - floorHeight*(i+1);
+    if(i === floors-1 && animProgress < 1){
+      animProgress += 0.05;
+      ctx.fillStyle = COLORS.concrete;
+      ctx.fillRect(baseX, y + floorHeight*(1-animProgress), buildingWidth, floorHeight*animProgress);
+    } else {
+      ctx.fillStyle = COLORS.concrete;
+      ctx.fillRect(baseX, y, buildingWidth, floorHeight);
+    }
+
+    // Textura
+    for(let t=0;t<10;t++){
+      const tx = baseX + Math.random()*buildingWidth;
+      const ty = y + Math.random()*floorHeight;
+      ctx.fillStyle = `rgba(180,180,180,${Math.random()*0.3})`;
+      ctx.fillRect(tx,ty,2,2);
+    }
+
+    // Listras SENAC
+    if(i % 3 === 1){
+      ctx.fillStyle = COLORS.stripe;
+      ctx.fillRect(baseX, y+floorHeight/3, buildingWidth, 6);
+      ctx.fillStyle = COLORS.stripeLight;
+      ctx.fillRect(baseX, y+floorHeight/3 + 6, buildingWidth, 3);
+    }
+
+    // Janelas
+    if(badges>5){
+      const rows = 2; const cols = 5;
+      const padX = 20; const padY = 10;
+      const winW = (buildingWidth - padX*(cols+1))/cols;
+      const winH = (floorHeight - padY*(rows+1))/rows;
+
+      for(let r=0;r<rows;r++){
+        for(let c=0;c<cols;c++){
+          const wx = baseX + padX + c*(winW+padX);
+          const wy = y + padY + r*(winH+padY);
+          const intensity = 0.3 + 0.2*Math.sin(Date.now()/500 + i + c);
+          ctx.fillStyle = `rgba(162,210,255,${intensity})`;
+          ctx.fillRect(wx, wy, winW, winH);
+          ctx.strokeStyle = COLORS.frame;
+          ctx.strokeRect(wx, wy, winW, winH);
+        }
+      }
+    }
+
+    // Sombra lateral
+    ctx.fillStyle = COLORS.shadow;
+    ctx.fillRect(baseX+buildingWidth, y, 8, floorHeight);
+  }
+
+  // Telhado e outdoor
+  if(badges >= MAX_BADGES && animProgress >=1){
+    ctx.fillStyle = COLORS.roof;
+    ctx.beginPath();
+    ctx.moveTo(baseX-10, baseY - floorHeight*floors);
+    ctx.lineTo(baseX+buildingWidth+10, baseY - floorHeight*floors);
+    ctx.lineTo(baseX+buildingWidth, baseY - floorHeight*floors - 20);
+    ctx.lineTo(baseX, baseY - floorHeight*floors - 20);
+    ctx.closePath();
+    ctx.fill();
+
+    const outX = baseX + buildingWidth/2 - 90;
+    const outY = baseY - floorHeight*floors - 60;
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(outX, outY, 180, 50);
+    ctx.strokeStyle = "#333"; ctx.lineWidth=2;
+    ctx.strokeRect(outX, outY, 180, 50);
+    ctx.fillStyle = "#0057b7";
+    ctx.font = "bold 26px sans-serif";
+    ctx.fillText("SENAC", outX+30, outY+34);
+  }
+}
+
+// Casinha de fundo
+function drawHouseBackground(){
+  if(badges < MAX_BADGES) return;
+  const baseY = canvas.height-100;
+  const houseX = canvas.width/2 - 400;
+  const houseY = baseY - 60;
+
+  ctx.fillStyle = COLORS.house;
+  ctx.fillRect(houseX, houseY, 100, 60);
+  ctx.fillStyle = COLORS.roofHouse;
+  ctx.beginPath();
+  ctx.moveTo(houseX-10, houseY);
+  ctx.lineTo(houseX+50, houseY-40);
+  ctx.lineTo(houseX+110, houseY);
+  ctx.closePath();
+  ctx.fill();
+  ctx.fillStyle="#6b4226";
+  ctx.fillRect(houseX+40, houseY+30, 20, 30);
+}
+
+// Loop principal
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = "#87ceeb";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+
+  drawGround();
+  drawCity();
+  updateParticles();
+  drawCrane();
+  drawBuilding();
+  drawHouseBackground();
+
+  requestAnimationFrame(draw);
+}
+
+// Inicialização
+updateUI();
+resize();
+draw();
+</script>
+
+</body>
+</html>
