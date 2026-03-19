@@ -73,3 +73,70 @@ width:200px;
     margin-left: 15px;
 }
 
+/* Estilização da lista dropDown */
+
+.dropdown{
+
+    width:  251px;
+    height: 200px;
+    background: #D9D9D9;
+    position: absolute;
+    top: 174px;
+    display: block;
+    border-radius: 9px;
+    filter: drop-shadow(2px 4px 6px #D9D9D9);
+
+}
+
+.dropdown::before{
+
+    content: url(../../imagem/setaHeader.png);
+    position: absolute;
+    top: -10px;
+
+}
+
+.listaDrop{
+
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    font-weight: 600;
+
+}
+
+.listaDrop li{margin: 10px;}
+
+.listaDrop li a{
+
+    display: inline-block;
+    color: #000;
+    transition: transform 0.3s ease;
+
+}
+
+.listaDrop li a:hover{transform: scale(1.10);}
+
+
+.lista2{
+
+    right: 0;
+    margin-right: 10px;
+    height: 150px;
+
+}
+
+.lista2::before{
+
+    content: url(../../imagem/setaHeader.png);
+    position: absolute;
+    top: -10px;
+    right: 10px;
+
+}
+
+.lista2 li{
+
+    margin: 0 0 30px 0;
+
+}
