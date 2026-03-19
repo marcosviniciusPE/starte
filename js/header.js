@@ -30,9 +30,9 @@ class DropDown {
         this.dropdown2.style.display = "none";
         this.dropdown2.innerHTML = `
             <ul class="listaDrop">
-                <li style="margin-top: 8px;"><a href="">GESTÃO E COMERCIO</a></li>
-                <li><a href="">CULTURA</a></li>
-                <li style="margin: 0;"><a href="">APRENDIZAGEM</a></li>
+                <li style="margin-top: 8px;"><a href="../planosDeCurso/planosDeCurso.html">Planos de curso</a></li>
+                <li><a href="">Eventos</a></li>
+                <li style="margin: 0;"><a href="../html/portal/portal.html">Portal docente</a></li>
             </ul>
         `;
 
