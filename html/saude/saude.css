@@ -1,196 +1,224 @@
-body{
+* {
 margin:0;
-font-family: Arial, Helvetica, sans-serif;
-}
-
-/* PARTE DE CIMA */
-.topo{
-display:flex;
-align-items:center;
-justify-content:space-between;
-background: white;
-padding:10px 20px;
-}
-
-.topo h1{
-color:#1d4f8c;
-font-size:22px;
-text-shadow: 2px 2px 4px #00000071;
-}
-
-.topo_logo{
-    display: flex;
-    align-items: center;
-}
-
-.space {
-    height: 50px;
-    border-radius: 10px;
-    width: 1.5px;
-    margin-left: 30px;
-    margin-right: 15px;
-    background-color: #a1a1a1;
-
-}
-
-.logo{
-width:90px;
-}
-
-.perfil{
-width:50px;
-height:50px;
-border-radius:50%;
-}
-
-/* BARRA AZUL */
-.nav{
-background:#1d4f8c;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:10px 20px;
-}
-
-.nav a{
-margin-right: 15px;
-color:white;
-font-weight:bold;
-text-decoration: none;
-}
-
-/* BUSCA */
-.nav input{
-padding:6px;
-border-radius:15px;
-border:none;
-width:200px;
-}
-
-.nav img{
-    width: 1vw;
-    margin-top: 5px;
-    margin-left: 15px;
-}
-
-
-
-
-
-
-body{
-font-family: Arial, Helvetica, sans-serif;
-margin:0;
-background:#f5f5f5;
-}
-
-.topo{
-background:#0bb1a5;
-color:white;
-padding:15px;
-text-align:center;
-}
-
-.topo ul{
-list-style:none;
-display:flex;
-justify-content:center;
-gap:30px;
 padding:0;
+box-sizing:border-box;
+font-family: "Montserrat", sans-serif;
+font-optical-sizing: auto;
+font-style: normal;
 }
 
-.banner img{
-width:100%;
+.carrosseu {
+    width: 100%;
+}
+
+.linha-topo{
+height:6px;
+background:#EBA219;
+}
+
+.init{
+    display: flex;
+    background-color: #004B8D;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    gap: 40px;
+    color: white;
+    justify-content: space-between;
+}
+
+.init p{
+    font-size: 35px;
+}
+
+.enferm {
+    width: 100%;
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.noticia{
+    background-color: #008F73;  
+    width: 81vw;
+    margin-bottom: 30px;
+    height: auto;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .conteudo{
-padding:20px 0;
-text-align:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.conteudo img{
-width:350px;
-border-radius:10px;
+.noticia a{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 20px;
+    align-self: center;
 }
 
-.imagem img{
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50%;
+.noticia img{
+    width: 120px;
+    height: 120px;
+    transform: rotate(-90deg);
 }
 
-.imagem h3{
-color: #e9af11dc;
+.barras{
+width:9px;
+height:115px;
+background:#c4c4c4d0;
+align-self: center;
 }
 
-.conteudo-azul {
-text-align:center;
-background-color: rgba(7, 7, 146, 0.856); /* Define a cor azul */
-color: white;           /* Cor do texto para contraste */
-padding:50px;          /* Espaço interno para o fundo azul aparecer */
-background-position: 100px;
+.barras2{
+width:80vw;
+height:5px;
+background:#c4c4c4d0;
+align-self: center;
+}
+
+.degrade{
+background: #CC016D;
+background: linear-gradient(0deg,rgba(204, 1, 109, 1) 40%, rgba(0, 75, 141, 1) 60%);
+height: auto;
+width: 100%;
 display: flex;
+justify-content: center;
 align-items: center;
+flex-direction: column;
 }
 
-
-.noticias{
-background:#0bb1a5;
-color:white;
-padding:10px;
-text-align:center;
-width: 70%;
+.degrade-one{
+    margin: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
 }
 
-.noticias a{
-background:#f7b500;
-padding:10px 20px;
-color:white;
-text-decoration:none;
-border-radius:5px;
+.degrade-one h1{
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    width: 40%;
+    justify-self: center;
+    align-self: center;
+    margin-right: 100px;
 }
 
-.curso{
-padding:20px;
-text-align:center;
-background-color: rgba(7, 7, 146, 0.856); /* Define a cor azul */
-color: white;           /* Cor do texto para contraste */
-padding: 180px;          /* Espaço interno para o fundo azul aparecer */
-background-position: 150px;
+.degrade-one img{
+    width: 45vw;
+    height: auto;
+    border-radius: 10px;
+}
+
+.degrade-button{
 display: flex;
+justify-content: space-between;
 align-items: center;
+gap: 80px;
+
 }
 
-.curso img{
-width:200px;
-border-radius:100px;
+.degrade-button button {
+    background: #EBA219;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
+.degrade-button button:hover {
+    transform: scale(1.05);
+    background: #d99a17;
+}
 .video{
-text-align:center;
-padding:20px;
+border-radius: 10px;
+width: 925px;
+height: 490px;
 }
 
-.tecnico{
-padding:20px;
-text-align:center;
+.inscricao{
+    color: #fff;
+    background-color: #EBB019;
+    width: 35%;
+    text-align: center;
+    margin-left: 100px;
 }
 
-.evento img{
-width:100%;
+.barra3{
+    width: 14px;
+    height: 95px;
+    background: #EBB019;
+    border-radius: 2px;
+    display: flex;
+    margin: 20px;
 }
 
 
-.rodape{
-background:#c41c5d;
-color:white;
-text-align:center;
-padding:100px;
-display: flex;
-align-items: center;
+.bege{
+   
+    background-color: #e6ddcf; /* cor bege clara */
+    width: 43%;
+    padding: 50px;
+    border-radius: 80px; /* deixa bem arredondado */
+    font-family: Arial, sans-serif;
+    border-radius: 0 5vw 5vw 0;
 }
 
-.enfermagem img{
-    width:100%;
+.card {
+    background-color: #1F3F6D; /* azul escuro */
+    color: #FFFFFF;
+    width: 260px;
+    padding: 20px;
+    border-radius: 25px;
+    border: 3px solid #3FA9F5; /* azul claro da borda */
+    font-family: Arial, sans-serif;
+}
+
+/* faixa laranja no topo */
+.topo {
+    height: 8px;
+    background-color: chocolate;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: -20px -20px 15px -20px;
+}
+
+/* título */
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* textos */
+.card p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* linha */
+.card hr {
+    border: 0;
+    height: 1px;
+    background-color: #ffffff50;
+    margin: 15px 0;
+}
+
+/* investimento */
+.investimento {
+    font-weight: bold;
 }

@@ -1,0 +1,158 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Montserrat", sans-serif;
+font-optical-sizing: auto;
+font-style: normal;
+}
+
+footer{
+background:#004B8D;
+color:white;
+}
+
+.linha-topo{
+height:6px;
+background:#EBA219;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+padding:40px;
+gap:40px;
+}
+
+.footer-sobre{
+max-width:450px;
+margin-left: 2vw;
+}
+
+.footer-sobre p{
+font-weight: 700;
+}
+
+.logo{
+width:140px;
+margin-bottom:15px;
+}
+
+.footer-sobre p{
+font-size:15px;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.footer-badges{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.footer-badges img{
+width:80px;
+}
+
+.btn-starte{
+background:linear-gradient(90deg,#4b5cff,#2c2cff);
+color:white;
+border:none;
+padding:10px 30px;
+border-radius:20px;
+cursor:pointer;
+font-size:16px;
+}
+
+.footer-redes{
+display:flex;
+flex-direction:column;
+gap:20px;
+align-items:center;
+}
+
+.footer-redes img{
+width:55px;
+height:55px;
+}
+
+.footer-links{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-right: 2vw;
+}
+
+.titulo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.barra{
+width:4px;
+height:25px;
+background:#123c63;
+border-radius:10px;
+}
+
+.footer-links h2{
+font-size:27px;
+margin: 20px 0;
+}
+
+.footer-links input{
+padding:10px;
+border:none;
+background:#2f5f98;
+color:white;
+}
+
+.parceiros{
+display:flex;
+gap:10px;
+align-items:center;
+}
+
+.parceiros a{
+color:white;
+text-decoration:none;
+}
+
+.footer-local{
+background:#3b6ea6;
+text-align:center;
+display: flex;
+align-items: center;
+justify-content: center;
+padding:15px;
+font-size:20px;
+font-weight:600;
+}
+
+.footer-local a{
+margin-top: 4px;
+color:white;
+text-decoration:none;
+}
+
+.footer-bottom{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+}
+
+.footer-bottom img{
+width:120px;
+}
+
+.empresa{
+display:flex;
+flex-direction:column;
+}
+
+.empresa a{
+color:white;
+text-decoration:none;
+}
