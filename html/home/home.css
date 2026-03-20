@@ -81,6 +81,7 @@ SEÇÃO PRINCIPAL
 }
 
 #secaoPrincipal button{
+    margin-top: 31px;
     font-weight:bold;
     font-size:26px;
     color:#fff;
@@ -124,7 +125,7 @@ CARROSSEL
     min-width:100%;
 }
 
-.slide img{
+#home .slide img{
     width:100%;
     height:70vh;
     object-fit:cover;
@@ -209,7 +210,7 @@ PROJETO INTEGRADOR
 }
 
 #projetoItegrador button,
-.titulo,
+.tituloss,
 .botaoEventos,
 .textosTalentos button,
 .textoPsg button{
@@ -245,7 +246,7 @@ UNIDADES
     margin-top:0;
 }
 
-.titulo{
+.tituloss{
     width:190px;
     text-align:center;
 }
@@ -273,7 +274,7 @@ ARTES CÊNICAS
     background:#F5EEE2;
 }
 
-#artes img{
+#home #artes img{
     width:100%;
     max-width:700px;
 }
@@ -410,7 +411,7 @@ iframe{
     aspect-ratio:16/9;
 }
 
-img{
+#home img{
     width: 49vw;
     height:auto;
     display:block;
