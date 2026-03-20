@@ -16,12 +16,11 @@ class DropDown {
         this.dropdown1.style.display = "none";
         this.dropdown1.innerHTML = `
             <ul class="listaDrop">
-                <li><a href="">GESTÃO E COMERCIO</a></li>
-                <li><a href="">CULTURA</a></li>
-                <li><a href="">APRENDIZAGEM</a></li>
-                <li><a href="">PERFIL</a></li>
-                <li><a href="">SAUDE</a></li>
-                <li><a href="">TECNOLOGIA</a></li>
+                <li><a href="../gestaoComercio/gestaoComercio.html">GESTÃO E COMERCIO</a></li>
+                <li><a href="../artes/artes.html">CULTURA</a></li>
+                <li><a href="../aprendiagem/aprendiagem.html">APRENDIZAGEM</a></li>
+                <li><a href="../saude/saude.html">SAUDE</a></li>
+                <li><a href="../tecnologia/tecnologia.html">TECNOLOGIA</a></li>
             </ul>
         `;
 
@@ -31,8 +30,7 @@ class DropDown {
         this.dropdown2.innerHTML = `
             <ul class="listaDrop">
                 <li style="margin-top: 8px;"><a href="../planosDeCurso/planosDeCurso.html">Planos de curso</a></li>
-                <li><a href="">Eventos</a></li>
-                <li style="margin: 0;"><a href="../html/portal/portal.html">Portal docente</a></li>
+                <li style="margin: 0;"><a href="../../html/eventos/eventos.html">Eventos</a></li>
             </ul>
         `;
 

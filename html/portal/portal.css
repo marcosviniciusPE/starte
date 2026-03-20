@@ -5,11 +5,7 @@ body{
     font-family: sans-serif;
 }
 
-button{
-
-    cursor: pointer;
-
-}
+button{cursor: pointer;}
 
 .principal{
 
@@ -56,6 +52,13 @@ button{
     width: 10vw;
     border-radius: 8px;
     filter: drop-shadow(2px 4px 5px #0404049c);
+}
+
+.texto button a{
+
+    color: #fff;
+    text-decoration: none;
+
 }
 
 .texto h1{
