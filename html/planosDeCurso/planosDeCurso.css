@@ -10,6 +10,23 @@ body{
 
 }
 
+/* PLANOS DE CURSO */
+
+.inicialTitulo{
+
+    background: #F5EEE2;
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 20px;
+
+}
+
+.imagemPlanoCurso img{
+
+    width: 100%;
+
+}
 
 /* =========================
 SEÇÃO SAÚDE
