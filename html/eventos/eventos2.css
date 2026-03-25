@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+/* BANNER */
+.banner {
+    width: 100%;
+    height: 500px;
+    background-color: #0073b1; /* Cor base caso a imagem falhe */
+    /* COLOQUE A IMAGEM DO BANNER (MULHER COM TABLET) AQUI */
+    background-image: url('banner-mulher.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.banner-img-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem não fique esticada */
+    z-index: 0; /* Fica atrás das setas e pontos */
+}
+
+.banner-content {
+    z-index: 1; /* Garante que os controles fiquem na frente da imagem */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.arrow {
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+/* CONTEÚDO */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 60px 10%;
+    flex-grow: 1;
+}
+
+/* CARD ESQUERDA */
+.course-card {
+    position: relative;
+    padding-top: 20px;
+}
+
+.badge-blue {
+    background-color: #245680;
+    color: white;
+    padding: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    width: 160px;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    z-index: 2;
+}
+
+.card-inner-border {
+    border: 3px solid #245680;
+    padding: 40px 30px;
+    height: 100%;
+}
+
+.course-type {
+    color: #245680;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.course-tag {
+    background-color: #245680;
+    color: white;
+    font-size: 10px;
+    padding: 3px 8px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.course-title {
+    color: #245680;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.course-info {
+    color: #444;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    align-items: center;
+}
+
+/* COLUNA DIREITA */
+.side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.orange-box {
+    background-color: #ff9f4d;
+    color: #245680;
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.orange-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+.date-range {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* FOOTER */
+.footer-bar {
+    background-color: #1a4a8e;
+    padding: 10px 40px;
+    height: 50px;
+}
+
+.btn-add {
+    background-color: #ffb142;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateY(-25px); /* Efeito de sair para fora da barra */
+}
+
+.section {
+    width: 100%;
+    min-height: 50vh; /* Cada seção ocupa 100% da altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 10%;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Inverter ordem para a seção amarela */
+.content-wrapper.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Estilos Seção Azul */
+.section-blue { background-color: #1a4a8e; }
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.rounded-card {
+    background-color: #f1ede4;
+    padding: 40px; 
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%; 
+    max-width: 800px;
+    height: auto; 
+    gap: 25px; 
+    text-align: center;
+    color: #1a4a8e;
+    margin: 20px auto;
+}
+
+.video-frame {
+    width: 100%;        
+    max-width: 650px;      
+    aspect-ratio: 16 / 9;  
+    height: auto;         
+    border-radius: 15px;   
+}
+
+.rounded-card h2 {
+    font-size: 1.6rem;     
+    font-weight: 800;
+    line-height: 1.2;
+    width: 90%;           
+    margin: 0;        
+}
+
+/* Estilos Seção Amarela */
+.section-yellow { background-color: #fbbd5c; }
+
+.text-block {
+    width: 45%;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.video-preview {
+    width: 50%;
+    position: relative;
+}
+
+.video-preview img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Estilos Seção Verde */
+.section-green { background-color: #109e5c; }
+
+.workshop-image {
+    width: 45%;
+}
+
+.workshop-image img {
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.text-block-large {
+    width: 50%;
+    color: white;
+}
+
+.text-block-large h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.saude-section {
+    display: flex;
+    width: 100%;
+    min-height: 800px; /* Altura ajustável conforme sua necessidade */
+    padding: 100px 6%;
+    gap: 30px;
+    background-color: #fff; /* Fundo branco para separar das outras seções */
+}
+
+/* Lado Esquerdo - Imagens */
+.saude-gallery {
+    flex: 0 0 35%; /* Ocupa 35% da largura */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.saude-img-wrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.saude-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Lado Direito - Card Gradiente */
+.saude-card-gradient {
+    flex: 1;
+    background: linear-gradient(180deg, #245680 0%, #ffb142 100%);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; 
+    gap: 30px;
+    text-align: center;
+    color: white;
+    height: auto; 
+    min-height: fit-content;
+}
+
+.video-iframe {
+    
+    width: 100%;            
+    max-width: 650px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.saude-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0;
+    width: 90%;
+    max-width: 600px;
+}
+/* Rodapé Vermelho */
+.saude-footer {
+    background-color: #d16b6b;
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.saude-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* Elementos de UI (Botões Play) */
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr; /* Vira uma coluna só no celular */
+        padding: 20px;
+    }
+    
+    .banner {
+        height: 300px; /* Banner menor no celular */
+    }
+    .content-wrapper, .content-wrapper.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .image-gallery, .rounded-card, .text-block, .video-preview, .workshop-image, .text-block-large {
+        width: 100%;
+    }
+
+    .section {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+    .saude-section {
+        flex-direction: column;
+    }
+    .saude-gallery {
+        flex: none;
+        height: 400px;
+    }
+    .saude-text h2 {
+        font-size: 1.5rem;
+    }
+    .saude-btn {
+        font-size: 1.1rem;
+    }
+}

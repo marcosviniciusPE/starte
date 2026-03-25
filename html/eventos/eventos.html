@@ -1,12 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adicionar Eventos Futuros - Senac</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://i0.wp.com/multarte.com.br/wp-content/uploads/2020/09/senac-logo-sem-fundo.png?fit=1280%2C751&ssl=1">
     <link rel="stylesheet" href="eventos.css">
 </head>
+
 <body>
-    
+    <div class="wrapper">
+        <main class="container">
+            <div class="header-banner">
+                <div class="carousel">
+                    <div class="carousel-item active">
+                        <img src="https://www.sp.senac.br/documents/20125/52224070/blog-senac-sp-gestao+e+negocios.jpg/2798626c-103c-2ef9-dc63-15bcd614606c?version=1.0&t=1666031025297null&download=true"
+                            alt="Evento 1">
+                    </div>
+                </div>
+                <div class="circle-decoration" style="z-index: 0; position: absolute;">
+
+                </div>
+            </div>
+
+            <h1 class="main-title">ADICIONAR EVENTOS FUTUROS</h1>
+
+            <div class="form-grid">
+
+                <div class="form-column">
+                    <div class="upload-container">
+                        <div class="upload-box">
+                            <span class="camera-icon">📷</span>
+                            <p>Adicionar Anexo</p>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Olá Docente! Digite seu nome aqui:</label>
+                        <input type="text" placeholder="Seu nome completo">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Informe a data do evento:</label>
+                        <input type="date">
+                    </div>
+
+                    <button class="btn-submit">Adicionar evento</button>
+                </div>
+
+                <div class="form-column">
+                    <div class="info-card">
+                        <h2 class="card-title">INFORMAÇÕES DO EVENTO</h2>
+
+                        <div class="question-block">
+                            <p>Seu evento se classifica como?</p>
+                            <label><input type="radio" name="class"> Projeto Integrador</label>
+                            <label><input type="radio" name="class"> Laboratório Juventude</label>
+                            <label><input type="radio" name="class"> Palestra</label>
+
+                        </div>
+
+                        <div class="question-block">
+                            <p>Local</p>
+                            <label><input type="radio" name="loc"> Salão de Eventos - Faculdade</label>
+                            <label><input type="radio" name="loc"> Laboratório de TI - CFP Senac</label>
+                            <label><input type="radio" name="loc"> Auditório - Faculdade</label>
+                            <label><input type="radio" name="loc"> Salão de Eventos P3 - Prédio Administrativo</label>
+                            <label><input type="radio" name="loc"> Auditório - Prédio Administrativo</label>
+                        </div>
+
+                        <div class="question-block">
+                            <p>Quem irá ministrar o evento?</p>
+                            <label><input type="radio" name="who"> Professores</label>
+                            <label><input type="radio" name="who"> Alunos</label>
+                            <label><input type="radio" name="who"> Coordenação</label>
+                            <label><input type="radio" name="who"> Gestão</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-column">
+                    <div class="textarea-wrapper">
+                        <textarea
+                            placeholder="Coloque aqui as informações do seu evento (até 300 caracteres)"></textarea><br>
+                        <span class="char-counter">0/300 caracteres</span>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
 </body>
+
 </html>

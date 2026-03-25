@@ -1,0 +1,258 @@
+/* Variáveis de Cores Baseadas na Imagem */
+:root {
+    --primary-red: #ee6a6a;
+    --dark-blue: #2A5A8A;
+    --card-blue: #5B6D8C;
+    --accent-orange: #FFB84D;
+    --circle-blue: #4DA3FF;
+    --light-cream: #FFF9F0;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Container que centraliza e preenche a tela */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: none;
+    background-color: var(--primary-red);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha tudo sem esticar */
+}
+
+.carousel-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.3);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+/* Banner Superior */
+.header-banner {
+    background-color: var(--circle-blue);
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Efeito do círculo azul da imagem */
+.circle-decoration {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, var(--circle-blue) 0%, #3586ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.image-placeholder {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+/* Título Principal */
+.main-title {
+    color: var(--white);
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    margin: 40px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+/* Grid de 3 Colunas */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 50px 50px 50px;
+}
+
+/* Coluna 1: Elementos */
+.upload-box {
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.camera-icon { font-size: 2.5rem; margin-bottom: 10px; }
+
+.input-group { margin-bottom: 20px; }
+.input-group label {
+    display: block;
+    color: white;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.btn-submit {
+    background-color: var(--accent-orange);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+}
+
+.btn-submit:hover { transform: scale(1.02); }
+
+/* Coluna 2: Card de Informações */
+.info-card {
+    background-color: var(--card-blue);
+    padding: 25px;
+    border-radius: 15px;
+    color: white;
+    height: 100%;
+}
+
+.card-title {
+    font-size: 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.question-block { margin-bottom: 20px; }
+.question-block p {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.question-block label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* Coluna 3: Textarea */
+.textarea-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    flex-grow: 1;
+    background-color: var(--light-cream);
+    border: none;
+    border-radius: 15px;
+    padding: 25px;
+    resize: none;
+    font-size: 1rem;
+    min-height: 300px;
+}
+
+.char-counter {
+    text-align: right;
+    font-size: 0.75rem;
+    color: #333;
+    margin-top: 12px;
+}
+
+/* RESPONSIVIDADE (Mobile) */
+@media (max-width: 992px) {
+    .form-grid {
+        grid-template-columns: 1fr; /* Transforma em 1 coluna no tablet/celular */
+        padding: 20px;
+    }
+    
+    .container {
+        border-radius: 0; /* Tela cheia total no mobile */
+    }
+
+    .wrapper {
+        padding: 0;
+    }
+
+    .header-banner {
+        height: 200px;
+    }
+}
