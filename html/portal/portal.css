@@ -1,0 +1,191 @@
+body{
+
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+button{cursor: pointer;}
+
+.principal{
+
+    background: #19466E;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 95vw;
+    padding: 100px 0 30px 0;
+    margin: 30px auto;
+
+}
+
+.imagens{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+
+.imagens #codigo1{
+
+    width: 25vw;
+
+}
+
+#codigo2{
+
+    width: 32vw;
+
+}
+
+.texto button{
+
+    padding: 15px;
+    font-weight: 600;
+    background: #EBA219;
+    color: #fff;
+    font-size: 1.4em;
+    border: 0;
+    width: 10vw;
+    border-radius: 8px;
+    filter: drop-shadow(2px 4px 5px #0404049c);
+}
+
+.texto button a{
+
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.texto h1{
+
+    color: #fff;
+
+}
+
+/* Botão gameficação */
+
+.gameficacao{
+
+    background: #FFA600;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.8em;
+    width: 95vw;
+    border: 0;
+    border-radius: 18px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+
+}
+
+/* Primeiros passos */
+
+#primeiroPasso{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+
+}
+
+.parteLaranja{
+
+    background: #FFA600;
+    padding: 10px;
+    border-radius: 26px 26px 26px 0;
+    color: #fff;
+    width: 15vw;
+    text-align: center;
+    position: relative;
+    top: 1.3vw;
+    font-weight: 600;
+    font-size: 1.2em;
+
+}
+
+.parte1 {
+    background: 
+        linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+        url(../../imagem/portal/primeiroPasso.png);
+    width: 30vw;
+    background-size: cover;
+    color: #004B8D;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 20px;
+}
+
+.alinhamentoTexto{
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.parte2{
+
+    background: #004B8D;
+    color: #fff;
+    font-size: 1.2em;
+     text-align: inherit;
+
+}
+
+.parte2 img{
+
+    width: 3vw;
+
+}
+
+/* missao */
+
+.missao{
+
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url(../../imagem/portal/missao.png);
+    width: 80vw;
+    height: 60vh;
+    background-size: cover;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* trofeu */
+
+#trofeus{
+
+    background: #004B8D;
+    color: #fff;
+    margin-top: 50px;
+
+}
+
+.tituloEmblema{
+
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-bottom: 3px solid #FFA600;
+
+}
+
+.linha{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+
+}

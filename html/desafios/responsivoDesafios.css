@@ -1,0 +1,230 @@
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px){
+
+    .titulos{
+        font-size: 4vw;
+        padding: 18px;
+    }
+
+    .parteLaranja{
+        width: 28vw;
+        font-size: 2.4vw;
+        top: 2vw;
+    }
+
+    .secao{
+        width: 88vw;
+        padding: 18px;
+        gap: 20px;
+    }
+
+    .secao p{
+        font-size: 2.8vw;
+    }
+
+    .secao span{
+        right: 0;
+        display: block;
+        margin-top: 12px;
+    }
+
+    #logo{
+        width: 12vw;
+    }
+
+    .espacoNivels{
+        font-size: 2.5vw;
+        padding: 50px 0;
+    }
+
+    #maestriaEtica{
+        padding: 70px 20px;
+    }
+
+    #maestriaEtica h2{
+        font-size: 2rem;
+    }
+
+    #maestriaEtica h3{
+        font-size: 1.1rem;
+        margin-bottom: 45px;
+    }
+
+    #maestriaEtica .caixas{
+        width: 86vw;
+        padding: 30px 25px;
+    }
+
+    #maestriaEtica .parteLaranja{
+        font-size: 2.8vw;
+        padding: 8px 18px;
+    }
+
+    #maestriaEtica #logo{
+        width: 85px;
+        right: -15px;
+        top: -15px;
+    }
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 768px){
+
+    .titulos{
+        font-size: 5.5vw;
+        padding: 16px 12px;
+    }
+
+    .parteLaranja{
+        width: auto;
+        min-width: 45vw;
+        max-width: 75vw;
+        font-size: 3.8vw;
+        padding: 10px 14px;
+        top: 3vw;
+    }
+
+    .secao{
+        width: 92vw;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 22px 16px;
+        border-radius: 0 25px 25px 25px;
+    }
+
+    .secao p{
+        font-size: 4vw;
+    }
+
+    .secao span{
+        position: static;
+        display: block;
+        margin-top: 12px;
+    }
+
+    #logo{
+        width: 20vw;
+        max-width: 90px;
+    }
+
+    .espacoNivels{
+        font-size: 4vw;
+        padding: 40px 0;
+        gap: 24px;
+    }
+
+    #maestriaEtica{
+        padding: 55px 12px;
+    }
+
+    #maestriaEtica h2{
+        font-size: 1.5rem;
+        width: 90%;
+    }
+
+    #maestriaEtica h3{
+        font-size: 1rem;
+        width: 90%;
+        margin-bottom: 35px;
+    }
+
+    #maestriaEtica .caixas{
+        width: 92vw;
+        padding: 28px 16px 20px 16px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+    }
+
+    #maestriaEtica .parteLaranja{
+        top: -14px;
+        left: 14px;
+        font-size: 4.2vw;
+        padding: 8px 16px;
+        min-width: auto;
+    }
+
+    #maestriaEtica .secao{
+        text-align: left;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    #maestriaEtica .secao p{
+        font-size: 4.2vw;
+        line-height: 1.5;
+    }
+
+    #maestriaEtica #logo{
+        width: 65px;
+        right: 8px;
+        top: -22px;
+    }
+}
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media (max-width: 480px){
+
+    .titulos{
+        font-size: 3.5vw;
+    }
+
+    .parteLaranja{
+        font-size: 4.2vw;
+        min-width: 52vw;
+    }
+
+    .secao{
+        width:67vw;
+        padding: 20px 14px;
+    }
+
+    .secao p{
+        font-size: 4.4vw;
+    }
+
+    #logo{
+        width: 22vw;
+    }
+
+    #maestriaEtica h2, #maestriaEtica h3{
+
+        text-align: center;
+
+    }
+    #maestriaEtica h2{
+        font-size: 1.3rem;
+    }
+
+    #maestriaEtica h3{
+        font-size: 0.95rem;
+        padding: 20px;
+    }
+
+    #maestriaEtica .caixas{
+        width: 75vw;
+        padding: 26px 14px 18px 14px;
+    }
+
+    #estiloIndividual{width: 67vw !important;}/* Parte laranja */
+    #maestriaEtica .parteLaranja{
+        font-size: 4.5vw;
+    }
+
+    #maestriaEtica .secao p{
+        font-size: 4.5vw;
+    }
+
+    #maestriaEtica #logo{
+        width: 55px;
+    }
+}

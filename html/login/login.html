@@ -3,10 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login - Startê </title>
+    <link rel="icon" type="image" href="https://logodownload.org/wp-content/uploads/2014/10/senac-logo-1-1.png">
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+   <div class="tela-login">
+        <div class="area-login">
+            <div class="logo-login">
+                <img src="https://logodownload.org/wp-content/uploads/2014/10/senac-logo-1-1.png" 
+                     alt="Logo Senac"
+                     class="logo">
+            </div>
+            
+            <h1 class="bemvindo">Bem-vindo!</h1>
+            <p class="subtitulo">Entre com suas credenciais</p>
+            
+            <form class="forms">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <div class="password-input">
+                        <input type="password" id="password" placeholder="Digite sua senha" required>
+                        <button type="button" class="show-password">Mostrar</button>
+                    </div>
+                </div>
+                
+                <div class="forgot-password">
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+                
+                <button type="submit" class="login-button">Entrar</button>
+            </form>
+        </div>
+    </div>
     
 </body>
 </html>

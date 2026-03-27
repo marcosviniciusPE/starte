@@ -1,12 +1,268 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
+    <!-- =========================
+    CONFIGURAÇÕES DA PÁGINA
+    ========================== -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Plano de curso</title>
+
+    <!-- CSS principal -->
     <link rel="stylesheet" href="planosDeCurso.css">
+    <link rel="stylesheet" href="../../html/header/header.css">
+    <link rel="stylesheet" href="../../html/footer/footer.css">
+
+    <!-- ICONE -->
+    <link rel="icon" href="../../imagem/logoSenac.png" type="image/png">
+
 </head>
+
 <body>
-    
+
+     <header>
+
+        <!-- PARTE SUPERIOR -->
+        <div class="topo">
+                <div class="topo_logo">
+                    <img src="/image/senac-logo.svg" class="logo">
+                    <div class="space"></div>
+                    <h1>OLÁ, DOCENTE</h1>
+                </div>
+        
+            <a href="../perfil/perfil.html"><img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="perfil"></a>
+        </div>
+
+        <hr style="height: 5px;background-color: orange;margin: 0;border: 0;">
+        <!-- PARTE INFERIOR -->
+        <nav class="nav">
+            <div>
+                <a href="" id="dropLista">AREAS</a>
+            <a href="../../html/portal/portal.html">PORTAL DOCENTE</a>
+        </div>
+        
+        <div style="display: flex;">
+            <form>
+                <input type="search" placeholder="Faça sua busca aqui">
+            </form>
+            
+            <img src="../../imagem/header/pup up.png" alt="imagem/cardapio" style="cursor: pointer;" id="elementoClick2">
+        </div>
+
+        </nav>
+
+    </header>
+
+    <section class="planosCurso">
+
+        <div class="inicialTitulo">PLANOS DE CURSO</div>
+        <div style="padding: 30px;text-align: center;">
+
+            <div style="background: #EBEBFF;font-size: 1.5em; width: 500px;margin: 0 auto;font-weight: 600;padding: 20px;">ARTES E CULTURA</div>
+
+        </div>
+        <div class="imagemPlanoCurso">
+
+            <img src="../../imagem/planoDeCurso/principalPlanoCurso.png" alt="pessoas"/>
+
+        </div>
+        <div style="font-weight: 600;text-align: center; font-size: 1.2em;padding: 20px;">
+
+            PC Técnico em Programação de jogos  Digitais - EAD
+
+        </div>
+
+    </section>
+
+    <section id="saude">
+
+        <h2>Saúde</h2>
+
+        <div class="imagemSaude">
+            <div class="tecnicoEnfermagem">TÉCNICO ENFERMAGEM</div>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+    SEÇÃO APRENDIZAGEM
+    ========================== -->
+
+    <section id="aprendizes">
+
+        <div class="aprendizesTextos">
+
+            <div class="aprendizesTitulo">Aprendizagem</div>
+
+            <div class="aprendizesTexto">
+
+                <p>Aprendizagem profissional de<br> Qualificação em Serviços<br> Administrativos.</p>
+
+                <p>Aprendizagem profissional de<br> Qualificação em Serviços de<br> Supermercado</p>
+
+                <p>Aprendizagem profissional de<br> Qualificação em Serviços de<br> Venda</p>
+
+                <p>Aprendizagem profissional<br> Técnica em Administração</p>
+
+            </div>
+
+        </div>
+
+        <div class="aprendizesImagem">
+            <img src="../../imagem/planoDeCurso/aprendizagem.png" alt="Aprendizagem do senac"/>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+    IMAGEM INTERMEDIÁRIA (TRABALHO)
+    ========================== -->
+
+    <div class="imagemTrabalho"></div>
+
+
+    <!-- =========================
+    SEÇÃO TECNOLOGIA
+    ========================== -->
+
+    <section id="tecnologia">
+
+        <div class="alinhamentoTecnologia">
+
+            <div class="parteAmarela">
+                TÉCNICO DESENVOLVIMENTO DE SISTEMAS
+            </div>
+
+            <div>TECNOLOGIA</div>
+
+            <div class="azul">
+                TÉCNICO EM REDES
+            </div>
+
+        </div>
+
+        <div class="imagemTecnologia"></div>
+
+    </section>
+
+
+    <!-- =========================
+    SEÇÃO GESTÃO E COMÉRCIO
+    ========================== -->
+
+    <section id="gestao">
+
+        <div class="gestaoAzul">GESTÃO</div>
+
+        <div class="palavras" style="width: 30px;position: absolute;right: 20vw;">E</div>
+
+        <div style="display: flex;align-items: center;flex-direction: row-reverse;">
+
+            <img src="../../imagem/planoDeCurso/gestao.png" alt="reunião"/>
+
+            <div class="palavras" style="position: absolute;right: 0;width: 120px;border-radius: 27px 0 0 27px;">
+                COMÉRCIO
+            </div>
+
+        </div>
+
+        <div style="align-self: end;"></div>
+
+    </section>
+    </main>
+
+
+          <!-- SEU CÓDIGO AQUI -->
+
+
+
+    <footer>
+
+        <div class="linha-topo"></div>
+
+        <div class="footer-container">
+
+            <div class="footer-sobre">
+
+                <img src="/image/senaclogobranc.png" alt="Logo Senac" class="logo">
+
+                <p>
+                Instituição de educação profissional aberta a toda a sociedade, com a missão de desenvolver pessoas e organizações para o mundo do trabalho. O Serviço Nacional de Aprendizagem Comercial – Senac, pessoa jurídica de direito privado, sem fins lucrativos,
+                foi criado pelo Decreto-lei nº 8.621 de 10 de janeiro de 1946. Neste mesmo ano, foi fundado também seu Departamento Regional de Pernambuco, instalado em 14 de outubro.
+                </p>
+
+                <div class="footer-badges">
+                    <img src="/image/PNPC 3.png" alt="Programa prevenção">
+                    <img src="/image/logo starte.png" alt="starte" style="width: 10vw;">
+                </div>
+
+            </div>
+
+
+            <div class="footer-redes">
+
+                <a href="#"><img src="/image/whatsapp.png" alt="Whatsapp"></a>
+                <a href="#"><img src="/image/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="/image/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="/image/facebook.png" alt="Facebook"></a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div class="titulo">
+                    <div class="barra"></div>
+                    <h2>Pesquise por Cursos e Notícias</h2>
+                </div>
+
+                <input type="text" placeholder="Pesquisar">
+
+                <div class="titulo">
+                    <div class="barra"></div>
+                    <h2>Parceiros</h2>
+                </div>
+
+                <div class="parceiros">
+                    <a href="#">Fecomércio Pernambuco</a>
+                    <span>|</span>
+                    <a href="#">Sesc Pernambuco</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-local">
+        <img src="/image/local.png" alt="">
+        <a href="">Pernambuco - Av. Visconde de Suassuna, 500 - Santo Amaro - Recife</a>
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <img src="/image/senaclogobranc.png" alt="Senac">
+
+            <p>© Todos os Direitos Reservados - 2017.</p>
+
+            <div class="empresa">
+                <ul>
+                <p><strong>Para sua empresa</strong></p>
+                <li><a href="#">Atendimento Corporativo</a></li>
+                <li><a href="#">Programa de Aprendizagem</a></li>
+                </ul>
+                
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="../../js/header.js"></script>
 </body>
 </html>
