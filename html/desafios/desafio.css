@@ -1,0 +1,161 @@
+body{
+
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+.secao{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #DFE8EE;
+    border-radius: 0 39px 39px 39px;
+    width: 80vw;
+    padding: 20px;
+
+}
+
+.secao p{
+
+    font-size: 2vw;
+
+}
+
+.secao span{
+
+    position: relative;
+    right: -35vw;
+
+}
+
+#facil .titulos{background: #0F9D58;}
+
+.titulos{
+
+    font-size: 2.5vw;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+
+}
+
+#logo{
+
+    width: 10vw;
+
+}
+
+.parteLaranja{
+
+    background: #F78B1F;
+    padding: 10px;
+    border-radius: 26px 26px 0 26px;
+    color: #fff;
+    width: 15vw;
+    text-align: center;
+    position: relative;
+    top: 1.3vw;
+
+}
+
+.espacoNivels{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 0;
+    color: #004B8D;
+    font-weight: 600;
+    font-size: 1.5vw;
+
+}
+
+#nivelFacil{background: #87CE87;}
+
+/* seção medio */
+
+#medio{background: #FFF1B8;}
+#medio .titulos{background: #FFD700;}
+
+#espacoMedio{gap: 4vw;}
+
+#espacoMedio .secao{background: #fff;}
+
+#espacoMedio .parteLaranja{
+
+        background: #EBA219;
+        color: #F5EEE2;
+
+}
+
+
+/* MAESTRIA ÉTICA */
+
+#maestriaEtica{
+    background:#E46363;
+    padding: 109px 0;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#maestriaEtica h2{
+    font-size:2.5rem;
+    margin:0;
+}
+
+#maestriaEtica h3{
+    font-size:1.3rem;
+    margin-top:10px;
+    margin-bottom:60px;
+}
+
+/* caixas */
+
+#maestriaEtica .caixas{
+    position:relative;
+    width:75vw;
+    background:#E6E6E6;
+    border-radius:25px;
+    padding:35px;
+    display:flex;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+/* titulo pequeno */
+
+#maestriaEtica .parteLaranja{
+    position:absolute;
+    top:-18px;
+    left:20px;
+    background:#D9D2C7;
+    color:#000;
+    font-weight:700;
+    border-radius:12px;
+    padding:8px 20px;
+    font-size: 2vw;
+}
+
+/* texto */
+
+#maestriaEtica .secao{
+    background:transparent;
+    color:#E48B00;
+    font-weight:600;
+    width:100%;
+    justify-content:flex-start;
+}
+
+/* icone lado direito */
+
+#maestriaEtica #logo{
+    position:absolute;
+    right:-25px;
+    top:-20px;
+    width:110px;
+}

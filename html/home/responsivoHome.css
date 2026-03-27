@@ -1,0 +1,169 @@
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width:1024px){
+
+/* seção principal */
+
+#secaoPrincipal{
+flex-direction:column;
+height:auto;
+text-align:center;
+padding:60px 20px;
+}
+
+#secaoPrincipal h1{
+font-size:60px;
+}
+
+#secaoPrincipal p{
+font-size:20px;
+}
+
+#secaoPrincipal .imagemPrinciapl{
+margin-top:40px;
+}
+
+#secaoPrincipal img{
+width:80vw;
+}
+
+/* projeto integrador */
+
+#projetoItegrador{
+flex-direction:column;
+text-align:center;
+gap:40px;
+}
+
+#projetoItegrador img{
+width:80vw;
+}
+
+#projetoItegrador .projetoIntegradorTexto{
+font-size:28px;
+}
+
+/* unidades */
+
+#unidades{
+flex-direction:column;
+text-align:center;
+gap:30px;
+}
+
+.unidadesTexto{
+font-size:24px;
+}
+
+/* artes */
+
+#artes{
+flex-direction:column;
+gap:30px;
+text-align:center;
+}
+
+#artes img{
+width:85vw;
+}
+
+#artes .explicacaoArtes{
+width:85vw;
+height:auto;
+padding:20px;
+}
+
+/* talentos */
+
+#talentosSenac{
+flex-direction:column;
+width:90vw;
+padding:50px 20px;
+}
+
+/* video */
+
+.videoTalento iframe{
+width:90vw;
+height:50vw;
+}
+
+/* psg */
+
+#secaoPsg{
+flex-direction:column;
+text-align:center;
+gap:40px;
+}
+
+#secaoPsg img{
+width:80vw;
+}
+
+.textoPsg{
+font-size:26px;
+}
+
+/* contribuição */
+
+#contribuicao{
+flex-direction:column;
+gap:40px;
+text-align:center;
+}
+
+.videoContribuicao iframe{
+width:90vw;
+height:50vw;
+}
+
+}
+
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width:600px){
+
+#secaoPrincipal h1{
+font-size:42px;
+}
+
+#secaoPrincipal p{
+font-size:18px;
+}
+
+#secaoPrincipal button{
+font-size:18px;
+padding:10px 20px;
+}
+
+#projetoItegrador .projetoIntegradorTexto{
+font-size:22px;
+}
+
+.unidadesTexto{
+font-size:20px;
+}
+
+#talentosSenac{
+font-size:1em;
+}
+
+.textoPsg{
+font-size:20px;
+}
+
+.seta{
+font-size:2.5em;
+}
+
+.slide img{
+height:45vh;
+}
+
+}

@@ -1,0 +1,418 @@
+/* ===============================
+CONFIGURAÇÕES GERAIS
+=============================== */
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* BOTÕES PROFISSIONAIS */
+
+button:not(.seta){
+    position: relative;
+    overflow: hidden;
+}
+
+button:not(.seta):hover{
+    transform: translateY(-4px) scale(1.02);
+    filter: brightness(1.1);
+}
+
+button:not(.seta):active{
+    transform: translateY(1px) scale(0.98);
+}
+
+button:not(.seta)::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+    transition:0.6s;
+}
+
+button:not(.seta):hover::before{
+    left:100%;
+}
+
+
+
+/* ===============================
+SEÇÃO PRINCIPAL
+=============================== */
+
+#secaoPrincipal{
+    background: #466C9B;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh;
+    padding: 20px 0 50px 0;
+}
+
+#secaoPrincipal .textoPrinpal{
+    margin-left: 9vw;
+    align-self: baseline;
+}
+
+#secaoPrincipal h1{
+    font-size: 96px;
+    margin-bottom: 0;
+}
+
+#secaoPrincipal p{
+    font-weight: 500;
+    font-size: 1.8vw;
+}
+
+#secaoPrincipal button{
+    margin-top: 31px;
+    font-weight:bold;
+    font-size:26px;
+    color:#fff;
+    background:#F78B1F;
+    border:0;
+    padding:6px 15px;
+    border-radius:8px;
+    filter: drop-shadow(2px 4px 5px #0404049c);
+    cursor:pointer;
+}
+
+#secaoPrincipal .imagemPrinciapl{
+    float:left;
+    margin-top:261px;
+}
+
+
+
+/* ===============================
+CARROSSEL
+=============================== */
+
+.carrossel img{
+    width:98vw;
+    height:50vh;
+}
+
+.carousel{
+    position:relative;
+    width:98vw;
+    margin:auto;
+    overflow:hidden;
+}
+
+.slides{
+    display:flex;
+    transition:transform 0.5s ease;
+}
+
+.slide{
+    min-width:100%;
+}
+
+#home .slide img{
+    width:100%;
+    height:70vh;
+    object-fit:cover;
+    display:block;
+}
+
+
+
+/* SETAS */
+
+.seta{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background: transparent;
+    border:none;
+    color:white;
+    font-size:4em;
+    padding:10px 15px;
+    cursor:pointer;
+    z-index:10;
+}
+
+.esquerda{
+    left:10px;
+}
+
+.direita{
+    right:10px;
+}
+
+
+
+/* BOLINHAS */
+
+.bolinhas{
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.dot{
+    height:12px;
+    width:12px;
+    margin:5px;
+    background:#92A6E3;
+    border-radius:50%;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.dot.active{
+    background:white;
+}
+
+
+
+/* ===============================
+PROJETO INTEGRADOR
+=============================== */
+
+#projetoItegrador{
+    background:#F5EEE2;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    padding:50px 0;
+    border-bottom:3px solid #EBA219;
+}
+
+#projetoItegrador img{
+    width:100%;
+    max-width:700px;
+}
+
+#projetoItegrador .projetoIntegradorTexto{
+    font-size:40px;
+    color:#004B8D;
+    font-weight:600;
+    text-align:center;
+}
+
+#projetoItegrador button,
+.tituloss,
+.botaoEventos,
+.textosTalentos button,
+.textoPsg button{
+    background:#EBA219;
+    padding:14px 40px;
+    border-radius:10px;
+    cursor:pointer;
+    color:#fff;
+    font-weight:600;
+    border:0;
+}
+
+
+
+/* ===============================
+UNIDADES
+=============================== */
+
+#unidades{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    padding:50px 0;
+    color:#004B8D;
+}
+
+#unidades img{
+    width:100%;
+    max-width:500px;
+}
+
+#unidades .unidadesDivUm h2{
+    margin-top:0;
+}
+
+.tituloss{
+    width:190px;
+    text-align:center;
+}
+
+.unidadesTexto{
+    font-size:32px;
+    font-weight:500;
+}
+
+.unidadesTexto p{
+    text-align:center;
+}
+
+
+
+/* ===============================
+ARTES CÊNICAS
+=============================== */
+
+#artes{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    padding:50px 0;
+    background:#F5EEE2;
+}
+
+#home #artes img{
+    width:100%;
+    max-width:700px;
+}
+
+#artes .explicacaoArtes{
+    font-size:22px;
+    font-weight:600;
+    background:#004B8D;
+    color:#fff;
+    height:15vh;
+    width:62vw;
+    padding:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.botaoEventos{
+    border-radius:20px;
+    padding:12px 30px;
+    width:130px;
+    margin-top:20px;
+    filter: drop-shadow(2px 4px 5px #0404049c);
+}
+
+
+
+/* ===============================
+TALENTOS SENAC
+=============================== */
+
+#talentosSenac{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    gap:30px;
+    color:#004B8D;
+    background:#F5EEE2;
+    width:80vw;
+    margin:50px auto;
+    border-radius:20px;
+    padding:90px 50px;
+    font-weight:700;
+    font-size:1.3em;
+    filter: drop-shadow(2px 4px 5px #0404049c);
+}
+
+#talentosSenac h2{
+    text-align:center;
+}
+
+.textosTalentos button{
+    display:block;
+    margin:50px auto;
+}
+
+
+
+/* ===============================
+SEÇÃO PSG
+=============================== */
+
+#secaoPsg{
+    background:#874FFF;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    padding:90px 50px;
+}
+
+#secaoPsg img{
+    width:100%;
+    max-width:500px;
+}
+
+.textoPsg{
+    color:#fff;
+    font-weight:600;
+    font-size:36px;
+    text-align:center;
+}
+
+
+
+/* ===============================
+CONTRIBUIÇÃO SENAC
+=============================== */
+
+#contribuicao{
+    padding:10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+}
+
+#contribuicao img{
+    width:100%;
+    max-width:500px;
+}
+
+#contribuicao .contr{
+    padding:70px 50px;
+    color:#004B8D;
+    text-align:center;
+    font-weight:600;
+    font-size:20px;
+}
+
+
+
+/* ===============================
+ANIMAÇÃO DE SCROLL
+=============================== */
+
+.animar{
+    opacity:0;
+    transform: translateY(60px);
+    transition: all 0.8s ease;
+}
+
+.animar.visivel{
+    opacity:1;
+    transform: translateY(0);
+}
+
+
+
+/* ===============================
+ELEMENTOS RESPONSIVOS
+=============================== */
+
+iframe{
+    width:100%;
+    aspect-ratio:16/9;
+}
+
+#home img{
+    width: 49vw;
+    height:auto;
+    display:block;
+}
